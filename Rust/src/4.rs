@@ -18,59 +18,34 @@ fn main() {
 	example1.sort();
 	example2.sort();
 	example3.sort();
+	let mut i = 1;
 
-	//example1
-	for i in 0..4 {
-		if example1[i] > 0 {
-			let mut j = example1[i] + 1;
-			loop {
-			if !example1.contains(&j) {
-				println!("Example 1 -> {}", j);
-				break;
-			} else {
-				j += 1;
-			}
-		}
+	loop {
+		if !example1.contains(&i) {
+			println!("Example 1 -> {}", i); //expect 2
 			break;
-		} else if i == 3 {
-			println!("Example 1: -> 1");
+		} else {
+			i += 1;
 		}
 	}
 
-	//example2
-	for i in 0..3 {
-		if example2[i] > 0 {
-			let mut j = example2[i] + 1;
-			loop {
-			if !example2.contains(&j) {
-				println!("Example 2 -> {}", j);
-				break;
-			} else {
-				j += 1;
-			}
-		}
+	let mut i = 1;
+	loop {
+		if !example2.contains(&i) {
+			println!("Example 2 -> {}", i); //expect 3
 			break;
-		} else if i == 2 {
-			println!("Example 2 -> 1");
+		} else {
+			i += 1;
 		}
 	}
 
-	//example3
-	for i in 0..5 {
-		if example3[i] > 0 {
-			let mut j = example2[i] + 1;
-			loop {
-			if !example3.contains(&j) {
-				println!("Example 3 -> {}", j);
-				break;
-			} else {
-				j += 1;
-			}
-		}
+	let mut i = 1;
+	loop {
+		if !example3.contains(&i) {
+			println!("Example 3 -> {}", i); //expect 1
 			break;
-		} else if i == 4 {
-			println!("Example 3 -> 1");
+		} else {
+			i += 1;
 		}
-
 	}
 }
